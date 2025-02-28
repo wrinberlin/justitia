@@ -155,38 +155,26 @@ judge_agent = ChatOpenAI(model="gpt-4o", temperature=0.2, openai_api_key=OPENAI_
 
 
 # Streamlit App
-st.title("Multi-Agent Legal Analysis")
-st.write("Input a case description below to see the analysis from both the prosecutor and the defense lawyer.")
+st.write("# KI-Rechtsanalyse mit einem Multiagentensystem (MAS)")
+
+st.write("Laden Sie eine Fallbeschreibung hoch, um zu sehen, wie Staatsanwaltschaft, Verteidigung und das Gericht die Angelegenheit beurteilen.")
 
 st.image(IMAGE_PATH)
 
-# Input Text Area
-input_text = \
-    st.text_area("Enter the case description here:", height=200, 
-                 key="auto_textarea")
-    
-# Inject JavaScript to dynamically resize the text area
-# Only works on streamlit community cloud
-st.markdown("""
-    <script>
-        function autoResize() {
-            var textarea = document.querySelector("textarea[data-testid='stTextArea']");
-            textarea.style.height = "auto"; 
-            textarea.style.height = (textarea.scrollHeight) + "px";
-        }
-        document.querySelector("textarea[data-testid='stTextArea']").addEventListener("input", autoResize);
-        autoResize();  // Run on page load
-    </script>
-""", unsafe_allow_html=True)
+input_text_raw = st.file_uploader("Laden Sie die Beschreibung des Falles hoch", type="txt")
 
-if st.button("Analyze Case"):
-    if input_text.strip():
-        # Run the case discussion
-        conversation_history = run_case_discussion(input_text)
-        conversation_history_with_verdict = \
-            pass_judgement(conversation_history)
-            
+if input_text_raw is not None:
+    input_text = input_text_raw.getvalue().decode("utf-8")
     
+    st.write("## Der Fall: ##")
+    st.write(input_text)
 
-    else:
-        st.warning("Please enter a case description before clicking the analyze button.")
+    if st.button("Start"):
+        if input_text.strip():
+            # Run the case discussion
+            conversation_history = run_case_discussion(input_text)
+            conversation_history_with_verdict = \
+                pass_judgement(conversation_history)
+    
+        else:
+            st.warning("Please enter a case description before clicking the analyze button.")
