@@ -130,7 +130,7 @@ def pass_judgement(conversation_history):
 try: 
     vectorstore = utils.load_stgb(FAISS_STORAGE_PATH, CHUNK_SIZE, OVERLAP)
 except: 
-    pdf = st.file_uploader("Upload your PDF file", type="pdf", 
+    pdf = st.file_uploader("Laden Sie das Strafgesetzbuch als PDF hoch", type="pdf", 
                            key="pdf_uploader_1")
     if pdf is not None:
         vectorstore = utils.load_pdf(pdf, CHUNK_SIZE, OVERLAP)

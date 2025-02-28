@@ -20,9 +20,12 @@ env.bak/
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Ignore project folders 
+# Ignore project folders and files
 test_cases/
 data/
+src/staatsanwalt_und_verteidiger_talk_streamlit 
+src/store_faiss_data
+
 
 # Ignore virtual environments
 *.env
