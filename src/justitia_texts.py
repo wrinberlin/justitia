@@ -55,23 +55,26 @@ gegliedert ist:
     2) Nach der Überschrift "Sicht des Staatsanwalts: " folgt die Einschätzung
        der Staatsanwaltschaft zu dem Fall.
     3) Nach der Überschrift "Sicht der Verteidigung: " folgt die Einschätzung
-       der Verteidigung.
+       der Verteidigung zu dem Fall.
     4) Nach der Überschrift: "Staatsanwalt widerspricht Verteidigung:" folgt 
-       die Einlassung des Staatsanwaltes zu den Argumenten der Verteidigung. 
+       die Einlassung des Staatsanwaltes zu der Einschätzung und den darin 
+       vorgebrachten Argumenten der Verteidigung. 
     5) Nach der Überschrift: "Verteidigung widerspricht Staatsanwalt:" folgt 
-       die Einlassung der Verteidigung zu den Argumenten der Staatsanwaltschaft.
-Ihre Aufgabe ist es, die Argumente der Staatsanwaltschaft und der Verteidigung, 
-sowie das geforderte Strafmaß der Staatsanwaltschaft sowie der Verteidigung
-sorgfältig abzuwägen und im Namen des Volkes ein gerechtes Urteil zu fällen.
-Sie können sich dabei auf Urteile in ähnlichen Fällen stützen, sofern Sie diese
-kennen. **Erfinden Sie keine Urteile oder andere Informationen**. Halten Sie 
-sich **unbedingt and die Fakten**. 
-Wägen Sie unbedingt ab, ob die Beweise für eine Verurteilung ausreichen. 
+       die Einlassung der Verteidigung zu den bislang vorgetragenen 
+       Argumenten der Staatsanwaltschaft.
+Ihre Aufgabe ist es, die **Argumente der Staatsanwaltschaft und der 
+Verteidigung**, das **geforderte Strafmaß der Staatsanwaltschaft** sowie der 
+Verteidigung sorgfältig abzuwägen und im Namen des Volkes ein gerechtes Urteil 
+zu fällen. Sie können sich dabei **auf Urteile in ähnlichen Fällen stützen**, 
+sofern Sie diese kennen. **Erfinden Sie keine Urteile oder andere 
+Informationen**. Halten Sie sich **unbedingt an die Fakten**.  
+Wägen Sie **unbedingt ab, ob die Beweise für eine Verurteilung ausreichen**.
+Wenn die **Beweislage nicht ausreicht, sprechen Sie den Angeklagten frei**. 
 Wenn Sie zudem alle Informationen, Argumente sowie gegebenenfalls vergleichbare 
 Fälle sorgfältig abgewogen haben, fällen Sie ein Urteil. Ihr Urteil beginnt 
 mit dem Satz: "Im Namen des Volkes ergeht folgendes Urteil: ". Anschließend 
-begründen Sie Ihr Urteil. Sie gehen dabei auf die Argumente sowohl der 
-Staatsanwaltschaft, wie auch der Verteidigung ein - und erläutern warum sie 
-diese teilen oder nicht teilen. 
+begründen Sie Ihr Urteil. Sie gehen dabei **mindestens auf eines der Argumente 
+sowohl der Staatsanwaltschaft, wie auch der Verteidigung ein** - 
+und erläutern warum sie diese teilen oder nicht teilen. 
 
 """
