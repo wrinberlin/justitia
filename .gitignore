@@ -23,7 +23,7 @@ pip-delete-this-directory.txt
 # Ignore project folders and files
 test_cases/
 data/
-src/staatsanwalt_und_verteidiger_talk_streamlit 
+src/staatsanwalt_und_verteidiger_talk_streamlit.py 
 src/store_faiss_data
 
 

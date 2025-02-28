@@ -161,7 +161,23 @@ st.write("Input a case description below to see the analysis from both the prose
 st.image(IMAGE_PATH)
 
 # Input Text Area
-input_text = st.text_area("Enter the case description here:", height=200)
+input_text = \
+    st.text_area("Enter the case description here:", height=200, 
+                 key="auto_textarea")
+    
+# Inject JavaScript to dynamically resize the text area
+# Only works on streamlit community cloud
+st.markdown("""
+    <script>
+        function autoResize() {
+            var textarea = document.querySelector("textarea[data-testid='stTextArea']");
+            textarea.style.height = "auto"; 
+            textarea.style.height = (textarea.scrollHeight) + "px";
+        }
+        document.querySelector("textarea[data-testid='stTextArea']").addEventListener("input", autoResize);
+        autoResize();  // Run on page load
+    </script>
+""", unsafe_allow_html=True)
 
 if st.button("Analyze Case"):
     if input_text.strip():
