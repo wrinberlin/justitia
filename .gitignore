@@ -24,6 +24,8 @@ pip-delete-this-directory.txt
 test_cases/
 data/
 src/staatsanwalt_und_verteidiger_talk_streamlit.py 
+src/staatsanwalt_und_verteidiger_talk_streamlit_2.py
+src/justitia_texts_2.py  
 src/store_faiss_data
 
 
