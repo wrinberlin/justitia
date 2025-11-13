@@ -127,13 +127,13 @@ def pass_judgement(conversation_history):
 # Load STGB vectorbase (or create it)
 # =============================================================================
 
-try: 
-    vectorstore = utils.load_stgb(FAISS_STORAGE_PATH, CHUNK_SIZE, OVERLAP)
-except: 
-    pdf = st.file_uploader("Laden Sie das Strafgesetzbuch als PDF hoch", type="pdf", 
-                           key="pdf_uploader_1")
-    if pdf is not None:
-        vectorstore = utils.load_pdf(pdf, CHUNK_SIZE, OVERLAP)
+# try: 
+#     vectorstore = utils.load_stgb(FAISS_STORAGE_PATH, CHUNK_SIZE, OVERLAP)
+# except: 
+#     pdf = st.file_uploader("Laden Sie das Strafgesetzbuch als PDF hoch", type="pdf", 
+#                            key="pdf_uploader_1")
+#     if pdf is not None:
+#         vectorstore = utils.load_pdf(pdf, CHUNK_SIZE, OVERLAP)
 
 # =============================================================================
 # Load system messages
@@ -156,6 +156,21 @@ judge_agent = ChatOpenAI(model="gpt-4o", temperature=0.2, openai_api_key=OPENAI_
 
 # Streamlit App
 st.write("# KI-Rechtsanalyse mit einem Multiagentensystem (MAS)")
+
+st.info("Laden Sie das Strafgesetzbuch als PDF hoch")
+uploaded_pdf = st.file_uploader(
+    "PDF auswählen", 
+    type="pdf", 
+    key="pdf_uploader_1"
+)
+
+if uploaded_pdf is not None:
+    with st.spinner("Vectorstore wird erstellt, bitte warten..."):
+        try:
+            vectorstore = utils.load_pdf(uploaded_pdf, CHUNK_SIZE, OVERLAP)
+            st.success("Vectorstore erfolgreich erstellt!")
+        except Exception as e:
+            st.error(f"Fehler beim Erstellen des Vectorstore: {e}")
 
 st.write("Laden Sie eine Fallbeschreibung hoch, um zu sehen, wie Staatsanwaltschaft, Verteidigung und das Gericht die Angelegenheit beurteilen.")
 
