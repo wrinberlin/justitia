@@ -19,7 +19,7 @@ import os
 from pathlib import Path
 
 from langchain_community.chat_models import ChatOpenAI
-from langchain.schema import SystemMessage, HumanMessage
+from langchain.schema.messages import SystemMessage, HumanMessage
 
 import justitia_texts
 import utils
