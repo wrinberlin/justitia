@@ -1,13 +1,28 @@
-langchain
-langchain-community
-langchain-core
-langchain-experimental
-langchain-openai
-langchain-text-splitters
-langgraph
-langsmith
-openai
-pillow
-streamlit
-faiss-cpu
-PyPDF2
+# Core LangChain packages
+langchain==0.3.19
+langchain-community==0.3.17
+langchain-core==0.3.40
+langchain-experimental==0.0.62
+langchain-openai==0.3.7
+langchain-text-splitters==0.3.6
+langgraph==0.1.8
+langsmith==0.3.8
+
+# OpenAI API
+openai==1.63.2
+
+# Streamlit
+streamlit==1.42.1
+
+# PDF handling
+PyPDF2==3.0.1
+pillow==11.1.0
+
+# Vector DB
+faiss-cpu==1.10.0
+
+# Misc
+tiktoken==0.9.0
+requests==2.32.3
+numpy==1.26.4
+pandas==2.2.3
